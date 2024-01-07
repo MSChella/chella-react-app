@@ -6,15 +6,16 @@ import VideoCard from './components/VideoCard/VideoCard';
 
 
 function App() {
-  const data = ["", "", "", ""];
+  const data = [{ name: "MIB", genre: "Sci-Fi" }, { name: "VTV", genre: "Romance" },
+  { name: "VTV", genre: "Romance" }, { name: "VTV", genre: "Romance" }];
 
   return (
     <>
       {
-        data.map((d, index) => (
+        data.map((movie, index) => (
 
 
-          <VideoCard key={`movie-card-${index}`} />
+          <VideoCard data={movie} key={`movie-card-${index}`} />
         ))}
 
     </>

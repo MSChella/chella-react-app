@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-function VideoCard(video) {
+function VideoCard({ data = {} }) {
 
     return (
         <div className='video_card'>
@@ -17,8 +17,8 @@ function VideoCard(video) {
 
             {/* <a href={video.url}> */}
             <div className='desc'>
-                <h3>My video</h3>
-                <p > Video description</p>
+                <h3>{data.name}</h3>
+                <p >{data.genre}</p>
             </div>
             {/* <h3>{video.title}</h3>
                 <p>{video.description}</p>
